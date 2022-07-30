@@ -1,8 +1,8 @@
-// Definir objeto
+# Definir objeto
 module Pepita
 end
 
-// Definir metodos
+# Definir metodos
 module Pepita
   def self.cantar!
   end
@@ -14,7 +14,7 @@ module Pepita
   end
 end
 
-// Atributos
+# Atributos
 module Pepita
     @energia = 100
   
@@ -27,7 +27,7 @@ module Pepita
     end
 end
 
-// Ejemplo definicion de metodos y atributos
+# Ejemplo definicion de metodos y atributos
 module Pepita
   @energia = 100
   @ciudad= Iruya
@@ -48,7 +48,7 @@ module Pepita
   end
 end
 
-// Metodo de acceso de ciudad, sirven para conocer el valor de un atributo
+# Metodo de acceso de ciudad, sirven para conocer el valor de un atributo
 module Pepita
   @energia = 100
   @ciudad = Obera
@@ -79,7 +79,7 @@ module Pepita
   end
 end
 
-// 11
+# 11
 module Obera
   def self.kilometro
     return 1040
@@ -129,7 +129,7 @@ module Pepita
 end
 
 
-// Delegar, metodos distancia a y gastar_energia
+# Delegar, metodos distancia a y gastar_energia
 module Pepita
   @energia = 1000
   @ciudad = Obera
