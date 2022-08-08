@@ -35,3 +35,8 @@ function masDificilDeCocinar(registro1,registro2){
   }
 }
 
+
+function endulzarMenu(menu)
+{
+  agregar(menu.postre.ingredientes,"azúcar");
+}

@@ -99,3 +99,23 @@ function minimaGananciaPositiva (balancesDeUnPeriodo) {
   
 }
 
+
+// Definí las funciones meses, afortunados, mesesAfortunados.
+
+function meses(listaDeBalances){
+  let meses = [];
+  for (let mess of listaDeBalances) {
+    agregar(meses,mess.mes)
+  }
+  return meses;
+}
+function afortunados(lista){
+  let afortunados = []
+  for(let registro of lista) {
+    if(registro.ganancia>1000){agregar(afortunados, registro)}
+  }
+  return afortunados;
+}
+function mesesAfortunados(lista){
+  return meses(afortunados(lista));
+}
