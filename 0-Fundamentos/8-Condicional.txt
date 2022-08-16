@@ -1,0 +1,69 @@
+2. Presentacion condicional
+procedure SacarAzulConMiedo() {
+  if (hayBolitas(Azul)) {
+    Sacar(Azul)
+  } 
+}
+
+
+3. Modificá el procedimiento que te dimos para que saque una bolita roja, sólo si hay alguna.
+procedure SacarRojoConMiedo() {
+  if (hayBolitas(Rojo)) {
+    Sacar(Rojo)
+  } 
+}
+
+4. Define un procedimiento CompletarCelda() que, si ya hay alguna bolita negra, complete la celda poniendo una roja, una azul y una verde.
+procedure CompletarCelda() {
+  if (hayBolitas(Negro)) {
+    Poner(Rojo)
+    Poner(Azul)
+    Poner(Verde)
+  } 
+}
+
+
+5. Creá un programa que se mueva al Este sólo si es posible. Recordá utilizar puedeMover(direccion).
+program  {
+  if (puedeMover(Este)) {
+    Mover(Este)
+  } 
+}
+
+
+6.Sabiendo esto, intentá crear un programa que ponga 1 bolita negra sólo si hay menos de 5 bolitas negras.
+program  {
+  if (nroBolitas(Negro) < 5) {
+    Poner(Negro)
+  } 
+}
+
+7.Definí un procedimiento AsegurarUnaBolitaVerde() que se asegure que en la celda actual hay al menos una bolita verde. Esto es: si ya hay bolitas verdes no hay que hacer nada, pero si no hay tendría que poner una.
+procedure AsegurarUnaBolitaVerde() {
+  if (not hayBolitas(Verde)) {
+    Poner(Verde)
+  } 
+}
+
+
+8. 
+procedure MoverComoSea() {
+    if (puedeMover(Oeste)) {
+        Mover(Oeste)
+    } else {
+        Mover(Norte)
+    }
+}
+
+
+9. Definí un procedimiento PrenderOApagarLuz() que se encargue de prender las luces que estén apagadas o apagar las luces encendidas, según corresponda. Tené en cuenta que en cada celda solo puede haber bolitas de color verde o negro.
+procedure PrenderOApagarLuz() {
+    if (hayBolitas(Negro)) {
+        Poner(Verde)
+        Sacar(Negro)
+    } else {
+        Poner(Negro)
+        Sacar(Verde)
+    }
+}
+

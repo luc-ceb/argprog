@@ -1,0 +1,69 @@
+2.Definí un procedimiento PonerSuma(x, y) que reciba dos parámetros y ponga la cantidad de bolitas rojas que surge de sumar x e y.
+procedure PonerSuma(x,y){
+  PonerN(x+y,Rojo)
+}
+
+3.Definí el procedimiento ContarGente(micros, autos, bicicletas) que a partir de la cantida de micros, autos y bicicletas que recibe como parámetro, haga las cuentas necesarias y refleje el resultado con bolitas de color verde.
+procedure ContarGente(micros, autos, bicicletas){
+  PonerN(micros*40+autos*4+bicicletas*1,Verde)
+}
+
+4. Opuesto
+procedure MoverComoSalmon(direccion) {
+  Mover(opuesto(direccion))
+}
+
+5. Definí el procedimiento CaminarDesconfiado(pasos) que simule el caminar de Carlos: debe recibir la cantidad de pasos que debería dar y recorrer la mitad. Siempre se mueve al Este.
+procedure CaminarDesconfiado(pasos){
+  MoverN(pasos div 2,Este)
+}
+
+
+6.Definí el procedimiento PonerAl(direccion, color).
+procedure PonerAl(direccion, color){
+  Mover(direccion)
+  Poner(color)
+  Mover(opuesto(direccion))
+}
+
+7.Valiéndote de tus nuevos conocimientos sobre expresiones, modificá el procedimiento Linea para que el cabezal quede en el lugar donde empezó.
+procedure Linea(direccion, color, longitud) {
+  repeat(longitud) {
+    Poner(color)
+    Mover(direccion)
+  }
+  MoverN(longitud,opuesto(direccion))
+}
+
+8. Dibujar L
+procedure Ele(direccion){
+  Linea(direccion, Azul, 3)
+  Linea(siguiente(direccion), Azul, 3)
+}
+
+10. Definí el procedimiento Flecha(direccion) que dibuje una flecha roja en la dirección correspondiente. El cabezal empieza y debe quedar siempre en el centro, como se ve en los tableros de ejemplo.
+procedure Flecha(direccion){
+  Mover(direccion)
+  Poner(Rojo)
+  Mover(opuesto(direccion))
+  Mover(siguiente(direccion))
+  Poner(Rojo)
+  Mover(opuesto(siguiente(direccion)))
+  Mover(previo(direccion))
+  Poner(Rojo)
+  Mover(opuesto(previo(direccion)))
+  
+  
+}
+
+11.Invocando nroBolitas, definí el procedimiento CopiarVerdesEnRojas.
+procedure CopiarVerdesEnRojas(){
+  PonerN(nroBolitas(Verde),Rojo)
+  
+}
+
+12.Definí SacarTodas(color), que recibe un color y saca todas las bolitas que hay de ese color (no debe hacer nada con el resto de los colores).
+
+procedure SacarTodas(color){
+  SacarN(nroBolitas(color),color)
+}

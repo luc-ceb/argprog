@@ -1,0 +1,86 @@
+procedure MoverOeste10() {
+  repeat(10) {
+    Mover(Oeste)
+  }
+}
+
+
+2.definí un procedimiento MoverOeste5 que se mueva 5 veces al Oeste.
+procedure MoverOeste5() {
+  repeat(5) {
+    Mover(Oeste)
+  }
+}
+
+4.Definí el procedimiento Poner3AlNoreste(), que ponga 3 bolitas negras en la primera celda al Noreste del cabezal.
+procedure Poner3AlNoreste(){
+  Mover(Este)
+  Mover(Norte)
+  repeat(3) {
+    Poner(Negro)
+  }
+
+}
+
+5.Definí el procedimiento PonerAzulLejos, que coloque una bolita Azul 4 celdas hacia el Este:
+procedure PonerAzulLejos(){
+  
+  repeat(4) {
+    Mover(Este)
+  }
+  Poner(Azul)
+}
+
+6.Definí una versión superadora de DibujarLineaNegra6, esta vez usando repeat.
+procedure DibujarLineaNegra6(){
+  
+  repeat(6) {
+    Poner(Negro)
+    Mover(Este)
+  }
+}
+
+7.
+procedure LineaRoja4() {
+  repeat(4) {
+    Poner(Rojo)
+    Mover(Norte)
+    
+  }
+}
+
+8.Definí un procedimiento Diagonal4Azul que dibuje una diagonal de longitud 4 hacia el Noreste, donde cada celda tenga una bolita azul. El cabezal debe quedar donde muestra la imagen.
+procedure Diagonal4Azul() {
+  repeat(4) {
+    Poner(Azul)
+    Mover(Este)
+    Mover(Norte)
+    
+  }
+}
+
+9.Definí un procedimiento DiagonalPesada4Azul que resuelva el problema.
+procedure DiagonalPesada4Azul() {
+  repeat(4) {
+    InsertarBolitas()
+    Mover(Este)
+    Mover(Norte)
+    
+  }
+}
+
+procedure InsertarBolitas(){
+  repeat(21) {
+      Poner(Azul)
+      }
+}
+
+10.Definí una nueva versión de LineaNegra4Este que deje el cabezal en la última celda de la línea.
+procedure LineaNegra4Este() {
+  repeat(3) {
+    Poner(Negro)
+    Mover(Este)
+   }
+  Poner(Negro)
+}
+
